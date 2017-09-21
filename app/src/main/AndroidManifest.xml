@@ -1,15 +1,31 @@
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="com.jamescho.androidgame">
+android:versionCode="1"
+android:versionName="1.0" >
 
-    package="com.jamescho.androidgame">
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.VIBRATE" />
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+<uses-sdk
+    android:minSdkVersion="8"
+    android:targetSdkVersion="17" />
 
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+<application
+    android:icon="@drawable/icon"
+    android:label="RobotGame" >
+    <activity
+        android:name="com.nevin.robotgame.SampleGame"
+        android:configChanges="keyboard|keyboardHidden|orientation"
+        android:label="RobotGame"
+        android:screenOrientation="landscape" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-    </application>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+</application>
 
 </manifest>
